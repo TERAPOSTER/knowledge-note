@@ -35,6 +35,9 @@ export const articlesNew = () => {
     previewArea.innerHTML = htmlText;
   });
 
+  
+};
+  // "公開" ボタンを押下された際にPOSTメソッドで /api/v1/articles に対してAPI通信を fetch で送信する
   // フォームが送信された際の処理（公開ボタン）
   const form = document.getElementById('articles-new-form');
   form.addEventListener('submit', async (event) => {
@@ -62,9 +65,6 @@ export const articlesNew = () => {
       console.error('記事の作成に失敗しました。');
     }
   });
-};
-  // "公開" ボタンを押下された際にPOSTメソッドで /api/v1/articles に対してAPI通信を fetch で送信する
-
 
 /**この下にPREVIEW関連の実装を試しにしてみる */
 import { parse } from 'marked';
