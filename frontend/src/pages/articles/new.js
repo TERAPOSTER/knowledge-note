@@ -12,8 +12,6 @@ import html from '../../templates/articles/new.html?raw';
 import DOMPurify from 'dompurify';
 // Markdown形式の文字列をHTML形式の文字列にするライブラリをインポート
 import { parse } from 'marked';
-// URL遷移するための関数をインポート
-import { navigate } from '../../utils/router';
 
 /**
  * 記事新規作成時の処理の関数
@@ -72,10 +70,6 @@ export const articlesNew = () => {
     }
   });
 };
-
-/**この下にPREVIEW関連の実装を試しにしてみる */
-import { parse } from 'marked';
-import DOMPurify from 'dompurify';
 
 const markdownText = `
 # 見出し
