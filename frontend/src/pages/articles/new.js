@@ -8,6 +8,13 @@ import html from '../../templates/articles/new.html?raw';
 // 実際にログインを伴うサイト等でフォーム送信などを行う処理にはCSRF攻撃に対する対策CSRFトークンも含めるなどの対策を実施してください
 // 参考: https://developer.mozilla.org/ja/docs/Glossary/CSRF
 
+// HTMLを無害化（サニタイズ）するライブラリをインポート
+import DOMPurify from 'dompurify';
+// Markdown形式の文字列をHTML形式の文字列にするライブラリをインポート
+import { parse } from 'marked';
+// URL遷移するための関数をインポート
+import { navigate } from '../../utils/router';
+
 /**
  * 記事新規作成時の処理の関数
  */
