@@ -31,10 +31,7 @@
 <div>optionのvalue属性の値 1～9 は2桁のゼロ埋め（01, 02...09）を行うようにしてください（JS側の調整が必要です）。</div>
 <h6>回答5: ※以下のselect, option要素のHTMLを参考にしつつ、書き換えて作成してください</h6>
 <select name="prefectures" id="prefectures">
-  <option value="01">北海道</option>
-  <option value="02">青森県</option>
-  <option>...中略...</option>
-  <option value="13">東京都</option>
-  <option>...中略...</option>
-  <option value="47">沖縄県</option>
+  {{#prefectures}}
+    <option value="{{zeroPad}}">{{label}}</option>
+  {{/prefectures}}
 </select>

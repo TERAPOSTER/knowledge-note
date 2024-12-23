@@ -21,6 +21,9 @@ export const learningMustache = () => {
       first: "Michael",
       last: "Jackson"
     },
+    zeroPad: function zeroPad(){
+      return String(this.value).padStart(2,'0');
+    },
     prefectures: prefectures,
   };
   // dataオブジェクトリテラルを渡しつつ画面に描画
