@@ -21,10 +21,12 @@ export const learningMustache = () => {
       first: "Michael",
       last: "Jackson"
     },
-    zeroPad: function zeroPad(){
-      return String(this.value).padStart(2,'0');
-    },
-    prefectures: prefectures,
+    prefectures: prefectures.map((row) => {
+      return {
+        label: row.label, 
+        value: `${row.value}`.padStart(2, '0')
+      };
+    }),
   };
   // dataオブジェクトリテラルを渡しつつ画面に描画
   app.innerHTML = mustache.render(html, data);
